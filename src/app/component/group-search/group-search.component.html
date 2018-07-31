@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Group Search</h4>
+ 
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+ 
+  <ul class="search-result">
+    <li *ngFor="let group of groups$ | async" >
+      <a routerLink="/detail/{{group.id}}">
+        {{group.name}}
+      </a>
+    </li>
+  </ul>
+</div>
