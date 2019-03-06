@@ -5,7 +5,7 @@
  
   <ul class="search-result">
     <li *ngFor="let group of groups$ | async" >
-      <a routerLink="/detail/{{group.id}}">
+      <a routerLink="/group-detail/{{group.id}}">
         {{group.name}}
       </a>
     </li>
